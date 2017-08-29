@@ -1,0 +1,17 @@
+{
+  "name": "slack-cronbot",
+  "version": "1.0.0",
+  "description": "Microservice that sends a slack scheduled alert",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "cron": "^1.2.1",
+    "nodemon": "^1.11.0"
+  }
+}

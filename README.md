@@ -40,7 +40,12 @@ The local _**Dockerfile**_ is used at the [Docker Hub Official Registry](https:/
 Just run:
 
 ```
-docker run -e NODE_ENV=production SLACK_HOOK_URL={yourSlackWebHookUrl} -e SLACK_MESSAGE={messageToBeSent} -e SLACK_CHANNEL={channelId(s)/Name(s)} -e CRON_TIME={yourCronTime} oscardhdz/slack-cronbot
+docker run -e NODE_ENV=production SLACK_HOOK_URL={yourSlackWebHookUrl} -e SLACK_MESSAGE={messageToBeSent} -e SLACK_CHANNEL={channelId(s)/Name(s)} -e CRON_TIME={yourCronTime} -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime oscardhdz/slack-cronbot
+```
+
+You might want to be aware of container timezone issues. I reommend binding volumes between conatiner and host with:
+```
+-v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime
 ```
 
 ## Expected Output

@@ -1,4 +1,8 @@
 node_modules/
 **.log
 configs/config.json
+**.png
+.gitignore
+README.md
+Dockerfile
 .DS_Store

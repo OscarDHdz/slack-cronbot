@@ -29,13 +29,13 @@ var ValidateParameters = () => {
     }
   if ( process.env.CRON_TIME ) console.log(`  OK - At: [35m${process.env.CRON_TIME}[0m`);
     else {
-      console.log(`[31m%s[0m`, `  ERROR - No CRON_TIME provided`);
-      throw `Missing CRON_TIME Environment variable`
+      process.env.CRON_TIME = "0 * * * * *"
+      console.log(`  OK - Cron time not privided sending each minute by default ([35m${process.env.CRON_TIME}[0m)`);
     }
   if ( process.env.CRON_ZONE ) console.log(`  OK - With timezone: [35m${process.env.CRON_ZONE}[0m`);
     else {
       process.env.CRON_ZONE = 'Etc/GMT0';
-          console.log(`  OK - Timezone not privided using default: [35m${process.env.CRON_ZONE}[0m`);
+      console.log(`  OK - Timezone not privided using default: [35m${process.env.CRON_ZONE}[0m`);
     }
   console.log(`[36m%s[0m`, `# Validation completed.`);
 

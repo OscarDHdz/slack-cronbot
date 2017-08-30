@@ -14,15 +14,12 @@ const {SendSlackMessage} = require('./utils/SlackMessage');
 
 
 new CronJob(CONFIGS.CRON_TIME, function () {
-
+  SendSlackMessage(CONFIGS)
+   .then((res) => {
+      var date = new Date();
+      console.log(`Message sent at: ${date.toString()}`);
+   })
+   .catch((err) => {
+     console.log(`[31m%s[0m`, `Message could not be sent due: ${err}`);
+  })
 }, null, true, CONFIGS.CRON_ZONE);
-
-
-SendSlackMessage(CONFIGS)
- .then((res) => {
-    var date = new Date();
-    console.log(`Message sent at: ${date.toString()}`);
- })
- .catch((err) => {
-   console.log(`[31m%s[0m`, `Message could not be sent due: ${err}`);
-})

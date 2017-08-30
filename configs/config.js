@@ -32,11 +32,6 @@ var ValidateParameters = () => {
       process.env.CRON_TIME = "0 * * * * *"
       console.log(`  OK - Cron time not privided sending each minute by default ([35m${process.env.CRON_TIME}[0m)`);
     }
-  if ( process.env.CRON_ZONE ) console.log(`  OK - With timezone: [35m${process.env.CRON_ZONE}[0m`);
-    else {
-      process.env.CRON_ZONE = 'Etc/GMT0';
-      console.log(`  OK - Timezone not privided using default: [35m${process.env.CRON_ZONE}[0m`);
-    }
   console.log(`[36m%s[0m`, `# Validation completed.`);
 
 }

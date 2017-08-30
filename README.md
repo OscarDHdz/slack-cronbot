@@ -20,8 +20,7 @@ npm install
   "SLACK_HOOK_URL": "someUrl",
   "SLACK_MESSAGE": "Hello World!",
   "SLACK_CHANNEL": "#random",
-  "CRON_TIME": "0 * * * * *",
-  "CRON_ZONE": "some/Timezone"
+  "CRON_TIME": "0 * * * * *"
 }
 ```
 
@@ -41,7 +40,7 @@ The local _**Dockerfile**_ is used at the [Docker Hub Official Registry](https:/
 Just run:
 
 ```
-docker run -e NODE_ENV=production SLACK_HOOK_URL={yourSlackWebHookUrl} -e SLACK_MESSAGE={messageToBeSent} -e SLACK_CHANNEL={channelId(s)/Name(s)} -e CRON_TIME={yourCronTime} -e CRON_ZONE={cronTimeZone} oscardhdz/slack-cronbot
+docker run -e NODE_ENV=production SLACK_HOOK_URL={yourSlackWebHookUrl} -e SLACK_MESSAGE={messageToBeSent} -e SLACK_CHANNEL={channelId(s)/Name(s)} -e CRON_TIME={yourCronTime} oscardhdz/slack-cronbot
 ```
 
 ## Expected Output
@@ -58,4 +57,3 @@ If everything is set up correctly, you should get a log like this:
 | SLACK_MESSAGE  | `Text`                                                  | The message to be sent by this Bot                                                                                                                              |
 | SLACK_CHANNEL  | `#ChannelName` OR `ChannelId` OR `Channels,separeted,by,commas` | A channel name with '#' char, or a channel Id (Beware channel name might change but Id wont). You can also specify 2  or more by separating each one with a coma |
 | CRON_TIME      | Cron Format: `* * * * * *`                              | Cron time syntax. Check [Cron Times](http://www.nncron.ru/help/EN/working/cron-format.htm) for more detail. Sets each minute by default (`0 * * * * *`)                                                      |
-| CRON_ZONE      | Cron Time Zone: `America/Los Angeles`                   | Cron timezone syntax. Check [Cron Timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for more details. Sets `Etc/GMT0` by default.                                    |

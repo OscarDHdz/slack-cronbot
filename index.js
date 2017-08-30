@@ -20,4 +20,4 @@ new CronJob(CONFIGS.CRON_TIME, function () {
    .catch((err) => {
      console.log(`[31m%s[0m`, `Message could not be sent due: ${err}`);
   })
-}, null, true, CONFIGS.CRON_ZONE);
+}, null, true, null);

@@ -47,5 +47,6 @@ module.exports = {
   SLACK_HOOK_URL: process.env.SLACK_HOOK_URL,
   SLACK_MESSAGE: process.env.SLACK_MESSAGE,
   SLACK_CHANNEL: process.env.SLACK_CHANNEL,
-  CRON_TIME: process.env.CRON_TIME
+  CRON_TIME: process.env.CRON_TIME,
+  CRON_ZONE: process.env.CRON_ZONE
 };

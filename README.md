@@ -49,8 +49,8 @@ You might want to be aware of container timezone issues. I reommend binding volu
 ```
 
 ## Expected Output
-If everything is set up correctly, you should get a log like this:
-![LogOutout](./LogOutputf.png)
+If everything is set up correctly, you should get a log like this (Preview available at Github):
+![LogOutout](./LogOutput.png)
 
 
 
@@ -61,4 +61,4 @@ If everything is set up correctly, you should get a log like this:
 | SLACK_HOOK_URL | Web Hook Url                                          | Your slack team incoming web hook. Check [Incoming Web Hook API](https://api.slack.com/incoming-webhooks) for more info.                                        |
 | SLACK_MESSAGE  | `Text`                                                  | The message to be sent by this Bot                                                                                                                              |
 | SLACK_CHANNEL  | `#ChannelName` OR `ChannelId` OR `Channels,separeted,by,commas` | A channel name with '#' char, or a channel Id (Beware channel name might change but Id wont). You can also specify 2  or more by separating each one with a coma |
-| CRON_TIME      | Cron Format: `* * * * * *`                              | Cron time syntax. Check [Cron Times](http://www.nncron.ru/help/EN/working/cron-format.htm) for more detail. Sets each minute by default (`0 * * * * *`)                                                      |
+| CRON_TIME      | Cron Format: `* * * * * *`                              | Cron time syntax. Check [npm Cron Ranges](https://www.npmjs.com/package/cron) for more detail. Sets each minute by default (`0 * * * * *`)                                                      |

@@ -7,7 +7,10 @@ Be sure to have a web hook installed at your slack subdomain. You'll need you'r 
 For more information check: [Incoming Webhooks API](https://api.slack.com/incoming-webhooks)
 
 ## Getting started
-You can start using this bot either as a standalone NodeJS App, with Heroku or as a Docker Container.
+You can start using this bot either as:  
+1. Standalone NodeJS App
+2. Heroku  
+3. Docker Container
 
 ### Standalone NodeJS
 1. Install dependencies
@@ -43,14 +46,17 @@ Just run:
 docker run -e NODE_ENV=production SLACK_HOOK_URL={yourSlackWebHookUrl} -e SLACK_MESSAGE={messageToBeSent} -e SLACK_CHANNEL={channelId(s)/Name(s)} -e CRON_TIME={yourCronTime} -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime oscardhdz/slack-cronbot
 ```
 
-You might want to be aware of container timezone issues. I reommend binding volumes between conatiner and host with:
+You might want to be aware of container timezone issues. I reommend binding time paths between conatiner and host with:
 ```
 -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime
 ```
 
 ## Expected Output
-If everything is set up correctly, you should get a log like this (Preview available at Github):
+If set up correctly, you should get an output like this (Preview available at Github):
 ![LogOutout](./LogOutput.png)
+
+
+
 
 
 

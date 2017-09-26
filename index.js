@@ -11,6 +11,7 @@ const {SendSlackMessage} = require('./utils/SlackMessage');
 
 
 // Index init ------------------------------------------------------------------
+console.log('Bot initiated at:', new String());
 new CronJob(CONFIGS.CRON_TIME, function () {
   SendSlackMessage(CONFIGS)
    .then((res) => {
